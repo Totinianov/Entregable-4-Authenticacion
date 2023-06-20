@@ -17,7 +17,7 @@ const routerUser = express.Router();
 
 routerUser
     .route("/")
-    .get(getAll) // Leer todos
+    .get(verifyJWT, getAll) // Leer todos
     .post(create); // crear
 
 routerUser.route("/login").post(login); // crear login
